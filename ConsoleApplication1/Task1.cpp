@@ -47,18 +47,18 @@ int main()
 	result[omp_get_thread_num()][2] = calculatedSum;
 	iterations.clear();
 }
-	printf("Количество потоков: %lf \n", (float)calculatedThreads);
+	printf("РљРѕР»РёС‡РµСЃС‚РІРѕ РїРѕС‚РѕРєРѕРІ: %lf \n", (float)calculatedThreads);
 	for (i = 0; i < calculatedThreads; i++) {
-		printf("Выполняющий узел: %lf \n", (float)i);
-		printf("Начальный счётчик цикла: %lf \n", (float)result[i][0]);
-		printf("Конечный счётчик цикла: %lf \n", (float)result[i][1]);
-		printf("Последнее значение суммы: %lf \n", (float)result[i][2]);
+		printf("Р’С‹РїРѕР»РЅСЏСЋС‰РёР№ СѓР·РµР»: %lf \n", (float)i);
+		printf("РќР°С‡Р°Р»СЊРЅС‹Р№ СЃС‡С‘С‚С‡РёРє С†РёРєР»Р°: %lf \n", (float)result[i][0]);
+		printf("РљРѕРЅРµС‡РЅС‹Р№ СЃС‡С‘С‚С‡РёРє С†РёРєР»Р°: %lf \n", (float)result[i][1]);
+		printf("РџРѕСЃР»РµРґРЅРµРµ Р·РЅР°С‡РµРЅРёРµ СЃСѓРјРјС‹: %lf \n", (float)result[i][2]);
 	}
 	pi = w * sum;
 	end_time = omp_get_wtime();
 	tick = omp_get_wtick();
 	printf("pi = %f\n", pi);
-	printf("Затраченное время %lf \n", end_time - start_time);
-	printf("Точность таймера %lf \n", tick);
+	printf("Р—Р°С‚СЂР°С‡РµРЅРЅРѕРµ РІСЂРµРјСЏ %lf \n", end_time - start_time);
+	printf("РўРѕС‡РЅРѕСЃС‚СЊ С‚Р°Р№РјРµСЂР° %lf \n", tick);
 	return 0;
 }
